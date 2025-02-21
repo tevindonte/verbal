@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -22,6 +23,20 @@ export default function Home() {
           </li>
           <li>Save and see your changes instantly.</li>
         </ol>
+
+        {/* Additional Protected Page Links */}
+        <div className="flex flex-col gap-2">
+          <Link href="/moodboard">
+            <span className="px-4 py-2 rounded border border-black hover:bg-gray-200 cursor-pointer">
+              Go to Moodboard (Protected)
+            </span>
+          </Link>
+          <Link href="/journal">
+            <span className="px-4 py-2 rounded border border-black hover:bg-gray-200 cursor-pointer">
+              Go to Journal (Protected)
+            </span>
+          </Link>
+        </div>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
